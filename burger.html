@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BurgerFactory</title>
+</head>
+<body>
+    <main>
+        <form action="#">
+            <h1>Burger-Factory</h1>
+            <fieldset style="width: 350px;">
+                <h3>Какой размер бургера ?</h3>
+                <input type="radio" id="big" name="size" data-price="100" data-calories="40" value="big" checked>
+                <label for="big">Большой (100 рублей, 40 калорий)</label>
+                <br>
+                <input type="radio" id="small" name="size" data-price="50" data-calories="20" value="small">
+                <label for="small">Маленький (50 рублей, 20 калорий)</label>
+            </fieldset>
+            <fieldset style="width: 350px;">
+                <h3>Какая будет начинка бургера ?</h3>
+                <input type="radio" id="cheese" name="ingredients" data-price="10" data-calories="20" value="cheese" checked>
+                <label for="cheese">С сыром (+10 рублей, +20 калорий)</label>
+                <br>
+                <input type="radio" id="salad" name="ingredients" data-price="20" data-calories="5" value="salad">
+                <label for="salad">С салатом (+20 рублей, +5 калорий)</label>
+                <br>
+                <input type="radio" id="potato" name="ingredients" data-price="15" data-calories="10" value="potato">
+                <label for="potato">С картофелем (+15 рублей, +10 калорий)</label>
+            </fieldset>
+            <fieldset style="width: 350px;">
+                <h3>Будем посыпать или нет ?</h3>
+                <input type="checkbox" id="seasoning" name="add" data-price="15" data-calories="0" value="seasoning">
+                <label for="seasoning">Посыпать приправой (+15 рублей, +0 калорий)</label>
+                <br>
+                <input type="checkbox" id="mayonnaise" name="add" data-price="20" data-calories="5" value="mayonnaise">
+                <label for="mayonnaise">Полить майонезом (+20 рублей, +5 калорий)</label>
+            </fieldset>
+            <br>
+            <button id="btn" style="padding: 5px; background: grey; font-size: 16px;">Расчитать бургер</button>
+            <h3>Стоимость вашего бургера: <span id="coast" style="color: red;">0</span></h3>
+            <h3>Калорийность вашего бургера: <span id="calories" style="color: red;">0</span></h3>
+        </form>
+    </main>
+    <script src="./js/burger.js"></script>
+</body>
+</html>
