@@ -1,0 +1,45 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+fieldset{
+    outline: none;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+input, textarea {
+    width: 200px;
+    padding: 5px 10px;
+    margin: 2px 0;
+}
+input:focus, textarea:focus{
+    outline: none;
+}
+button{
+    border: none;
+    background: orangered;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 200px;
+    
+    padding: 7px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+button:hover{
+    background: rgb(216, 202, 202);
+    color: orangered;
+}
+.red {
+    border: 2px solid red ;
+}
+.green {
+    border: 2px solid green;
+}
+.vision_none{
+    display: none;
+}

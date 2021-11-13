@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 4</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <fieldset>
+        <form class="formvalidation" action="#" novalidate>
+            <label for="name">Фамилия* (только символы без пробела)</label>
+            <br>
+            <input type="text" id="name" placeholder="Иванов" required pattern="^[A-Za-zА-Яа-яЁё]+$">
+            <br>
+            <label for="telephone">Телефон* (только в указанном формате +7(000)000-0000)</label>
+            <br>
+            <input type="text" id="telephone" placeholder="+7(000)000-0000" required pattern="^\+7\(\d{3}\)\d{3}-\d{4}$">
+            <br>
+            <label for="email">Email* (mymail@mail.ru, или my.mail@mail.ru, или my-mail@mail.ru)</label>
+            <br>
+            <input type="email" id="email" placeholder="my-mail@mail.ru" required pattern="^[\w._-]+@\w+\.[A-Za-z]{2,4}$">
+            <br>
+            <label for="comments">Доп.инфо* (любой текст, цифры и символы)</label>
+            <br>
+            <textarea id="comments" cols="22" rows="4" required></textarea>
+            <br>
+            <button class="btn-sub">submit</button>
+            <h3 id="false" class="vision_none">Допущена ошибка заполнения формы!</h3>
+            <h3 id="true" class="vision_none">Форма отправлена!</h3>
+        </form>
+    </fieldset>
+   
+<script src="./script.js"></script>
+</body>
+</html>
+
