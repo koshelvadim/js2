@@ -43,3 +43,13 @@ button:hover{
 .vision_none{
     display: none;
 }
+.text-sub{
+    display: flex;
+    justify-content: center;
+}
+h3{
+    margin: 20px;
+}
+.text-red{
+    color: red;
+}

@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="text-sub">
+        <h3>Форма обратной связи</h3>
+    </div>
     <fieldset>
         <form class="formvalidation" action="#" novalidate>
             <label for="name">Фамилия* (только символы без пробела)</label>
@@ -24,11 +27,14 @@
             <br>
             <textarea id="comments" cols="22" rows="4" required></textarea>
             <br>
-            <button class="btn-sub">submit</button>
-            <h3 id="false" class="vision_none">Допущена ошибка заполнения формы!</h3>
-            <h3 id="true" class="vision_none">Форма отправлена!</h3>
-        </form>
+            <button class="btn-sub">submit</button>   
+        </form>   
     </fieldset>
+    <div class="text-sub">
+        <h4 id="false" class="vision_none text-red">Допущена ошибка заполнения формы!</h4>
+        <h4 id="true" class="vision_none">Форма успешно отправлена</h4>
+    </div>
+    
    
 <script src="./script.js"></script>
 </body>

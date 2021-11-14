@@ -28,49 +28,52 @@ const telephoneForm = document.getElementById('telephone');
 const emailForm = document.getElementById('email');
 const textForm = document.getElementById('comments');
 
-listInputs.forEach(function(input){
-    input.addEventListener('input', function(event){
+listInputs.forEach(input => (input.addEventListener('input', (event => {
         if (input.validity.valid) {
             input.classList.remove('red');
             input.classList.add('green');
             errorText.classList.add('vision_none');
-      } else {
-            input.classList.remove('green');
-            input.classList.add('red');
-        } 
-    });
-});
+            } else {
+                input.classList.remove('green');
+                input.classList.add('red');
+            } 
+        })
+    ))
+)
 
-textForm.addEventListener('input', function(event) {
+textForm.addEventListener('input', (event => {
     if (textForm.validity.valid) {
         textForm.classList.remove('red');
         textForm.classList.add('green');
         errorText.classList.add('vision_none');
-  } else {
-        textForm.classList.remove('green');
-        textForm.classList.add('red');
-    }
- });
+        } else {
+            textForm.classList.remove('green');
+            textForm.classList.add('red');
+        }
+    })
+)
 
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', (event => {
     if (nameForm.validity.valueMissing || emailForm.validity.valueMissing || telephoneForm.validity.valueMissing || textForm.validity.valueMissing || !nameForm.validity.valid || !emailForm.validity.valid || !telephoneForm.validity.valid) {
         errorMsg();
-        event.preventDefault();
-          
-    } else {
+        event.preventDefault();  
+        } else {
         sucText.classList.remove('vision_none');
         errorText.classList.add('vision_none');
-    }
- });
+        textForm.value = ''; 
+        listInputs.forEach(input => input.value = '');
+        }
+    })
+)
 
 function errorMsg() {
-    if (errorText.classList == 'vision_none' && sucText.classList != 'vision_none'){
+    if (errorText.classList === 'vision_none' && sucText.classList !== 'vision_none'){
     errorText.classList.remove('vision_none');
     sucText.classList.add('vision_none');
     } else {
         sucText.classList.add('vision_none');
         errorText.classList.remove('vision_none');
         textForm.classList.add('red');
-        listInputs.forEach((input) => input.classList.add('red'));
+        listInputs.forEach(input => input.classList.add('red'));
     }
 }
