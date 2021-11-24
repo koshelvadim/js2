@@ -5,7 +5,7 @@ Vue.component('cart', {
       return {
           cartUrl: '/getBasket.json',
           cartItems: [],
-          imgCart: 'https://placehold.it/50x100',
+          imgCart: 'https://via.placeholder.com/50x100',
           showCart: false
       }
     },
@@ -36,40 +36,38 @@ Vue.component('cart', {
                         }
                     })
             }
-
-            // this.$parent.getJson(`${API}/addToBasket.json`)
-            //     .then(data => {
-            //         if(data.result === 1){
-            //             let find = this.cartItems.find(el => el.id_product === item.id_product);
-            //             if(find){
-            //                 find.quantity++;
-            //             } else {
-            //                 const prod = Object.assign({quantity: 1}, item);
-            //                 this.cartItems.push(prod)
-            //             }
-            //         }
-            //     })
         },
-        remove(item){
-            this.$parent.getJson(`${API}/addToBasket.json`)
-                .then(data => {
-                    if (data.result === 1) {
-                        if(item.quantity>1){
+        remove(item) {
+            if (item.quantity > 1) {
+                this.$parent.putJson(`/api/cart/${item.id_product}`, {quantity: -1})
+                    .then(data => {
+                        if (data.result === 1) {
                             item.quantity--;
-                        } else {
+                        }
+                    });
+            } else {
+                this.$parent.deleteJson(`/api/cart/${item.id_product}`)
+                    .then(data => {
+                        if (data.result === 1) {
                             this.cartItems.splice(this.cartItems.indexOf(item), 1);
                         }
-                    }
-                })
+                    });
+            }
         },
+        calcSum(){
+            return this.cartItems.reduce((accum, item) => accum += item.price * item.quantity, 0);
+          }
     },
-    template: `<div>
-<button class="btn-cart" type="button" @click="showCart = !showCart">Корзина</button>
-        <div class="cart-block" v-show="showCart">
-            <cart-item v-for="item of cartItems" :key="item.id_product" :img="imgCart" :cart-item="item" @remove="remove">
-            </cart-item>
-        </div>
-        </div>
+    
+    template: ` <div>
+                    <button class="btn-cart" type="button" @click="showCart = !showCart">Корзина</button>
+                    <div class="cart-block" v-show="showCart">
+                        <p v-if="!cartItems.length">В корзине пусто</p>
+                        <cart-item v-for="item of cartItems" :key="item.id_product" :img="imgCart" :cart-item="item" @remove="remove">
+                        </cart-item>
+                        <h4 v-if="cartItems.length">Общая сумма товаров: $ {{ calcSum() }} </h4>
+                    </div>
+                </div>
     `
 });
 

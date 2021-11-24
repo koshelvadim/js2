@@ -1,17 +1,17 @@
-const express = require('express');
-const fs = require('fs');
+const express = require('express'); // импорт модуля 
+const fs = require('fs');  // импорт модуля 
 const app = express();
-const cart = require('./cartRouter');//обработчик всех запросов корзины
+const cart = require('./cartRouter'); //обработчик всех запросов корзины (наш модуль)
 
 app.use(express.json());
-app.use('/', express.static('public'));
+app.use('/', express.static('public'));  // запуск файла index.html (по умолчанию не пишется)
 app.use('/api/cart', cart);
 
 
-// app.get();
-// app.post();
-// app.put();
-// app.delete();
+// app.get();   READ
+// app.post();  CREATE  ВСТАВИТЬ
+// app.put();  UPDATE
+// app.delete();  DELETE  УДАЛИТЬ
 
 app.get('/api/products', (req, res) => {
     fs.readFile('server/db/products.json', 'utf-8', (err, data) => {
@@ -28,5 +28,5 @@ app.get('/api/products', (req, res) => {
 //     res.send(req.query);
 // });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;  // регистрация порта 3000
 app.listen(port, () => console.log(`Listen on port ${port}...`));
