@@ -9,199 +9,69 @@ _
     <script src="https://kit.fontawesome.com/d5b67c0e16.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <header>
-        <div class="container_fluid bg_dark">
-            <nav class="container top">
-                <div class="navbar_left">
-                    <a href="index.html"><img src="images/logo.svg" alt="picture"></a>
-                    <input type="checkbox" id="search">
-                    <label for="search" class="menu_padding"><i class="fas fa-search"></i></label>
-                    <form class="menu_search">
-                        <input type="search" class="menu_search_input" placeholder="Search" aria-label="Search" />
-                    </form>
-                </div>
-                <div class="navbar_right">
-                    <input type="checkbox" id="menu" checked>
-                    <label for="menu" class="menu_padding"><i class="fas fa-bars"></i></label>
-                    <nav class="main_menu">
-                        <label for="menu" class="close_item">
-                            <i class="fas fa-times"></i>
-                        </label>
-                        <h5 class="text_menu_box_h5">Menu</h5>
-                        <a href="catalog.html" class="menu_link_h6">
-                            <h6 class="text_menu_box_h6">Men</h6>
-                        </a>
-                        <a href="#" class="menu_link">Accessories</a>
-                        <a href="#" class="menu_link">Bags</a>
-                        <a href="#" class="menu_link">Denim</a>
-                        <a href="#" class="menu_link">T-Shirts</a>
-                        <a href="catalog.html" class="menu_link_h6">
-                            <h6 class="text_menu_box_h6">Women</h6>
-                        </a>
-                        <a href="#" class="menu_link">Accessories</a>
-                        <a href="#" class="menu_link">Jackets & Coats</a>
-                        <a href="#" class="menu_link">Polos</a>
-                        <a href="#" class="menu_link">T-Shirts</a>
-                        <a href="#" class="menu_link">Shirts</a>
-                        <a href="catalog.html" class="menu_link_h6">
-                            <h6 class="text_menu_box_h6">Kids</h6>
-                        </a>
-                        <a href="#" class="menu_link">Accessories</a>
-                        <a href="#" class="menu_link">Jackets & Coats</a>
-                        <a href="#" class="menu_link">Polos</a>
-                        <a href="#" class="menu_link">T-Shirts</a>
-                        <a href="#" class="menu_link">Shirts</a>
-                        <a href="#" class="menu_link">Bags</a>
-                    </nav>
-                    <a class="menu_padding vision_none" href="registration.html"><i class="far fa-user"></i></a>
-                    <a class="menu_padding vision_none" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <section class="container_fluid bg_fluid">
-        <div class="container_xl main">
-            <div class="main_left vision_none">
-                <img class="image_header_1" src="images/main_image.png" alt="picture">
+    <div id="app">
+        <errorcomp ref="errorcomp"></errorcomp>
+        <header>
+            <div class="container_fluid bg_dark">
+                <nav class="container top">
+                    <div class="navbar_left">
+                        <a><img src="images/logo.svg" alt="picture"></a>
+                        <filtercomp ref="filtercomp"></filtercomp>
+
+                    
+                        
+                    </div>
+                    <div class="navbar_right">
+                        <a class="menu_padding"><i class="fas fa-bars"></i></a>
+                        <a class="menu_padding vision_none"><i class="far fa-user"></i></a>
+                        <cartcomp ref="cartcomp"></cartcomp>
+                    </div>
+                </nav>
             </div>
-            <div class="main_right">
-                <div>
-                    <p class="text_line"></p>
+        </header>
+        <!-- <section class="container_fluid bg_fluid">
+            <div class="container_xl main">
+                <div class="main_left vision_none">
+                    <img class="image_header_1" src="images/main_image.png" alt="picture">
                 </div>
-                <div>
-                    <h1 class="text_main_right">THE BRAND</h1>
-                    <h2 class="text_main_right_1">OF LUXERIOUS <span class="text_main_right_2">FASHION</span></h2>
+                <div class="main_right">
+                    <div>
+                        <p class="text_line"></p>
+                    </div>
+                    <div>
+                        <h1 class="text_main_right">THE BRAND</h1>
+                        <h2 class="text_main_right_1">OF LUXERIOUS <span class="text_main_right_2">FASHION</span></h2>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <div class="container box">
-        <a class="box1" href="catalog.html">
-            <p class="text_box1">30% OFF<br><span class="text_box_ping">FOR WOMEN</span></p>
-        </a>
-        <a class="box2" href="catalog.html">
-            <p class="text_box2">HOT DEAL<br><span class="text_box_ping">FOR MEN</span></p>
-        </a>
-        <a class="box3" href="catalog.html">
-            <p class="text_box3">NEW ARRIVALS<br><span class="text_box_ping">FOR KIDS</span></p>
-        </a>
-        <a class="box4" href="catalog.html">
-            <p class="text_box4">LUXIROUS & TRENDY<br><span class="text_box_ping">ACCESORIES</span></p>
-        </a>
-    </div>
+        </section>
+        <div class="container box">
+            <a class="box1" href="#">
+                <p class="text_box1">30% OFF<br><span class="text_box_ping">FOR WOMEN</span></p>
+            </a>
+            <a class="box2" href="#">
+                <p class="text_box2">HOT DEAL<br><span class="text_box_ping">FOR MEN</span></p>
+            </a>
+            <a class="box3" href="#">
+                <p class="text_box3">NEW ARRIVALS<br><span class="text_box_ping">FOR KIDS</span></p>
+            </a>
+            <a class="box4" href="#">
+                <p class="text_box4">LUXIROUS & TRENDY<br><span class="text_box_ping">ACCESORIES</span></p>
+            </a>
+        </div> -->
+
     <section class="container text_items">
         <h4 class="text_items_h4">Fetured Items</h4>
         <p class="text_items_p">Shop for items based on what we featured in this week</p>
-        <div class="card_container">
-            <div class="card_box">
-                <a class="card" href="product.html">
-                    <img class="images_card" src="images/items_1.png" alt="picture">
-                    <div class="card_text">
-                        <h5 class="text_card_h5">ELLERY X M'O CAPSULE</h5>
-                        <p class="text_card_p">Known for her sculptural takes on traditional tailoring, Australian
-                            arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="text_cash">$52.00</p>
-                    </div>
-                </a>
-                <div class="add_box">
-                    <a class="add_to_cart" href="cart.html">
-                        <img class="images_add" src="images/add_to_cart.png" alt="picture">
-                        <p class="text_add_to_cart_p">Add to Cart</p>
-                    </a>
-                </div>
-            </div>
-            <div class="card_box">
-                <a class="card" href="product.html">
-                    <img class="images_card" src="images/items_2.png" alt="picture">
-                    <div class="card_text">
-                        <h5 class="text_card_h5">ELLERY X M'O CAPSULE</h5>
-                        <p class="text_card_p">Known for her sculptural takes on traditional tailoring, Australian
-                            arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="text_cash">$52.00</p>
-                    </div>
-                </a>
-                <div class="add_box">
-                    <a class="add_to_cart" href="cart.html">
-                        <img class="images_add" src="images/add_to_cart.png" alt="picture">
-                        <p class="text_add_to_cart_p">Add to Cart</p>
-                    </a>
-                </div>
-            </div>
-            <div class="card_box">
-                <a class="card" href="product.html">
-                    <img class="images_card" src="images/items_3.png" alt="picture">
-                    <div class="card_text">
-                        <h5 class="text_card_h5">ELLERY X M'O CAPSULE</h5>
-                        <p class="text_card_p">Known for her sculptural takes on traditional tailoring, Australian
-                            arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="text_cash">$52.00</p>
-                    </div>
-                </a>
-                <div class="add_box">
-                    <a class="add_to_cart" href="cart.html">
-                        <img class="images_add" src="images/add_to_cart.png" alt="picture">
-                        <p class="text_add_to_cart_p">Add to Cart</p>
-                    </a>
-                </div>
-            </div>
-            <div class="card_box">
-                <a class="card" href="product.html">
-                    <img class="images_card" src="images/items_4.png" alt="picture">
-                    <div class="card_text">
-                        <h5 class="text_card_h5">ELLERY X M'O CAPSULE</h5>
-                        <p class="text_card_p">Known for her sculptural takes on traditional tailoring, Australian
-                            arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="text_cash">$52.00</p>
-                    </div>
-                </a>
-                <div class="add_box">
-                    <a class="add_to_cart" href="cart.html">
-                        <img class="images_add" src="images/add_to_cart.png" alt="picture">
-                        <p class="text_add_to_cart_p">Add to Cart</p>
-                    </a>
-                </div>
-            </div>
-            <div class="card_box">
-                <a class="card" href="product.html">
-                    <img class="images_card" src="images/items_5.png" alt="picture">
-                    <div class="card_text">
-                        <h5 class="text_card_h5">ELLERY X M'O CAPSULE</h5>
-                        <p class="text_card_p">Known for her sculptural takes on traditional tailoring, Australian
-                            arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="text_cash">$52.00</p>
-                    </div>
-                </a>
-                <div class="add_box">
-                    <a class="add_to_cart" href="cart.html">
-                        <img class="images_add" src="images/add_to_cart.png" alt="picture">
-                        <p class="text_add_to_cart_p">Add to Cart</p>
-                    </a>
-                </div>
-            </div>
-            <div class="card_box">
-                <a class="card" href="product.html">
-                    <img class="images_card" src="images/items_6.png" alt="picture">
-                    <div class="card_text">
-                        <h5 class="text_card_h5">ELLERY X M'O CAPSULE</h5>
-                        <p class="text_card_p">Known for her sculptural takes on traditional tailoring, Australian
-                            arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="text_cash">$52.00</p>
-                    </div>
-                </a>
-                <div class="add_box">
-                    <a class="add_to_cart" href="cart.html">
-                        <img class="images_add" src="images/add_to_cart.png" alt="picture">
-                        <p class="text_add_to_cart_p">Add to Cart</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="button"><a href="catalog.html" class="button_products">Browse All Product</a></div>
+        
+            <productscomp ref="productscomp"></productscomp>
+       
+        <!-- <div class="button"><a href="#" class="button_products">Browse All Product</a></div> -->
     </section>
     <footer>
         <div class="footer_up">
@@ -261,6 +131,15 @@ _
             </div>
         </div>
     </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="./js/ErrorComp.js"></script> 
+    <script src="./js/FilterComp.js"></script>
+    <script src="./js/CartComponent.js"></script>
+    <script src="./js/ProductComponent.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
