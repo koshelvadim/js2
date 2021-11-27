@@ -1,32 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+_
 <head>
     <meta charset="UTF-8">
-    <title>Интернет-магазин</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INERNET-SHOP</title>
+    <script src="https://kit.fontawesome.com/d5b67c0e16.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-<div id="app">
-    <header>
-        <div class="logo">E-shop</div>
-        <div class="cart">
 
-            <filter-el></filter-el>
-            <cart ref="cart"></cart>
+<body>
+    <div id="app">
+        <errorcomp ref="errorcomp"></errorcomp>
+        <header>
+            <div class="container_fluid bg_dark">
+                <nav class="container top">
+                    <div class="navbar_left">
+                        <a><img src="images/logo.svg" alt="picture"></a>
+                        <filtercomp ref="filtercomp"></filtercomp>
+
+                    
+                        
+                    </div>
+                    <div class="navbar_right">
+                        <a class="menu_padding"><i class="fas fa-bars"></i></a>
+                        <a class="menu_padding vision_none"><i class="far fa-user"></i></a>
+                        <cartcomp ref="cartcomp"></cartcomp>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- <section class="container_fluid bg_fluid">
+            <div class="container_xl main">
+                <div class="main_left vision_none">
+                    <img class="image_header_1" src="images/main_image.png" alt="picture">
+                </div>
+                <div class="main_right">
+                    <div>
+                        <p class="text_line"></p>
+                    </div>
+                    <div>
+                        <h1 class="text_main_right">THE BRAND</h1>
+                        <h2 class="text_main_right_1">OF LUXERIOUS <span class="text_main_right_2">FASHION</span></h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container box">
+            <a class="box1" href="#">
+                <p class="text_box1">30% OFF<br><span class="text_box_ping">FOR WOMEN</span></p>
+            </a>
+            <a class="box2" href="#">
+                <p class="text_box2">HOT DEAL<br><span class="text_box_ping">FOR MEN</span></p>
+            </a>
+            <a class="box3" href="#">
+                <p class="text_box3">NEW ARRIVALS<br><span class="text_box_ping">FOR KIDS</span></p>
+            </a>
+            <a class="box4" href="#">
+                <p class="text_box4">LUXIROUS & TRENDY<br><span class="text_box_ping">ACCESORIES</span></p>
+            </a>
+        </div> -->
+
+    <section class="container text_items">
+        <h4 class="text_items_h4">Fetured Items</h4>
+        <p class="text_items_p">Shop for items based on what we featured in this week</p>
+        
+            <productscomp ref="productscomp"></productscomp>
+       
+        <!-- <div class="button"><a href="#" class="button_products">Browse All Product</a></div> -->
+    </section>
+    <footer>
+        <div class="footer_up">
+            <div class="container forma_footer">
+                <div class="forma">
+                    <img src="images/Forma_1.png" alt="forma">
+                    <h5 class="text_forma_h5">Free Delivery</h5>
+                    <p class="text_forma_p">Worldwide delivery on all. Authorit tively morph next-generation innov tion
+                        with extensive models.</p>
+                </div>
+                <div class="forma">
+                    <img src="images/Forma_2.png" alt="forma">
+                    <h5 class="text_forma_h5">Sales & discounts</h5>
+                    <p class="text_forma_p">Worldwide delivery on all. Authorit tively morph next-generation innov tion
+                        with extensive models.</p>
+                </div>
+                <div class="forma">
+                    <img src="images/Forma_3.png" alt="forma">
+                    <h5 class="text_forma_h5">Quality assurance</h5>
+                    <p class="text_forma_p">Worldwide delivery on all. Authorit tively morph next-generation innov tion
+                        with extensive models.</p>
+                </div>
+            </div>
         </div>
-    </header>
-    <main>
-        <error ref="error"></error>
-        <products ref="products"></products>
-    </main>
-</div>
-    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+        <div class="container_fluid footer_bg_image">
+            <div class="container footer_center">
+                <figure class="footer_center_left">
+                    <img src="images/face.png" alt="picture">
+                    <p class="footer_center_left_text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a
+                        pulvinar purus condimentum“</p>
+                </figure>
+                <div class="footer_center_right">
+                    <p class="footer_center_right_text_1">SUBSCRIBE</p>
+                    <p class="footer_center_right_text_2">FOR OUR NEWLETTER AND PROMOTION</p>
+                    <form action="#" class="input_round">
+                        <input class="email" type="email" placeholder="Enter Your Email" size="28">
+                        <button class="submit" type="submit" value="Subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bg">
+            <div class="container footer_box">
+                <div class="footer_down_left">
+                    <p class="footer_down_left_text">© 2021 Brand All Rights Reserved.</p>
+                </div>
+                <div class="footer_down_right">
+                    <a class="footer_down_right_link" href="#"><img class="footer_icon" src="images/icon_1.png"
+                            alt="icons"></a>
+                    <a class="footer_down_right_link" href="#"><img class="footer_icon" src="images/icon_2.png"
+                            alt="icons"></a>
+                    <a class="footer_down_right_link" href="#"><img class="footer_icon" src="images/icon_3.png"
+                            alt="icons"></a>
+                    <a class="footer_down_right_link" href="#"><img class="footer_icon" src="images/icon_4.png"
+                            alt="icons"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="js/ProductComponent.js"></script>
-<script src="js/CartComponent.js"></script>
-<script src="js/FilterComp.js"></script>
-<script src="js/ErrorComp.js"></script>
-    <script src="js/main.js"></script>
+
+    <script src="./js/ErrorComp.js"></script> 
+    <script src="./js/FilterComp.js"></script>
+    <script src="./js/CartComponent.js"></script>
+    <script src="./js/ProductComponent.js"></script>
+    <script src="./js/main.js"></script>
 </body>
+
 </html>

@@ -1,13 +1,18 @@
-Vue.component('filter-el', {
+Vue.component('filtercomp', {
     data(){
       return {
           userSearch: ''
       }
     },
-    template: `<form action="#" class="search-form" @submit.prevent="$parent.$refs.products.filter(userSearch)">
-                <input type="text" class="search-field" v-model="userSearch">
-                <button type="submit" class="btn-search">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>`
+    template: `
+                <form action="#" class="menu_search" @submit.prevent="$root.$refs.productscomp.filter(userSearch)">
+                    <input 
+                        type="text" 
+                        class="menu_search_input" 
+                        v-model="userSearch"
+                        placeholder="Поиск">
+                    <button type="submit" class="btn-search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>`
 })

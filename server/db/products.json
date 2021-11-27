@@ -1,22 +1,86 @@
 [
   {
-    "id_product": 124,
-    "product_name": "Keyboard",
-    "price": 1600
+    "product_id": 101,
+    "product_name": "ELLERY X M'O CAPSULE",
+    "product_text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+    "product_image": "../images/items_1.png",
+    "product_price": 1100
   },
   {
-    "id_product": 457,
-    "product_name": "Gamepad",
-    "price": 3000
+    "product_id": 102,
+    "product_name": "ELLERY X M'O CAPSULE",
+    "product_text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+    "product_image": "../images/items_2.png",
+    "product_price": 1200
   },
   {
-    "id_product": 123,
-    "product_name": "Ноутбук",
-    "price": 45600
+    "product_id": 103,
+    "product_name": "ELLERY X M'O CAPSULE",
+    "product_text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+    "product_image": "../images/items_3.png",
+    "product_price": 1400
   },
   {
-    "id_product": 456,
-    "product_name": "Мышка",
-    "price": 1000
-  }
+    "product_id": 104,
+    "product_name": "ELLERY X M'O CAPSULE",
+    "product_text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+    "product_image": "../images/items_4.png",
+    "product_price": 1500
+  },
+  {
+    "product_id": 105,
+    "product_name": "ELLERY X M'O CAPSULE",
+    "product_text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+    "product_image": "../images/items_5.png",
+    "product_price": 2000
+  },
+  {
+    "product_id": 106,
+    "product_name": "ELLERY X M'O CAPSULE",
+    "product_text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+    "product_image": "../images/items_6.png",
+    "product_price": 1800
+  },
+  {
+    "product_id": 201,
+    "product_name": "ELLERY X M'O CAPSULE",
+    "product_text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+    "product_image": "../images/items_7.png",
+    "product_price": 1100
+  },
+  {
+    "product_id": 202,
+    "product_name": "ELLERY X M'O CAPSULE",
+    "product_text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+    "product_image": "../images/items_8.png",
+    "product_price": 1200
+  },
+  {
+    "product_id": 203,
+    "product_name": "ELLERY X M'O CAPSULE",
+    "product_text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+    "product_image": "../images/items_9.png",
+    "product_price": 1400
+  },
+  {
+    "product_id": 204,
+    "product_name": "ELLERY X M'O CAPSULE",
+    "product_text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+    "product_image": "../images/items_10.png",
+    "product_price": 1500
+  },
+  {
+    "product_id": 205,
+    "product_name": "ELLERY X M'O CAPSULE",
+    "product_text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+    "product_image": "../images/items_11.png",
+    "product_price": 2000
+  },
+  {
+    "product_id": 206,
+    "product_name": "ELLERY X M'O CAPSULE",
+    "product_text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+    "product_image": "../images/items_12.png",
+    "product_price": 1800
+  }      
 ]
